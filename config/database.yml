@@ -18,16 +18,20 @@ default: &default
   # For details on connection pooling, see Rails configuration guide
   # https://guides.rubyonrails.org/configuring.html#database-pooling
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  username: <%= ENV.fetch("PG_USER", "zeyad")%>
+  password: <%= ENV.fetch("PG_PASSWORD", "password")%>
+  host: <%= ENV.fetch("PG_HOST", "localhost")%>
+
 
 development:
   <<: *default
-  database: secure_files_with_log_auditing_ruby_development
+  database: secure_files_with_log_auditing_development
 
   # The specified database role being used to connect to PostgreSQL.
   # To create additional roles in PostgreSQL see `$ createuser --help`.
   # When left blank, PostgreSQL will use the default role. This is
   # the same name as the operating system user running Rails.
-  #username: secure_files_with_log_auditing_ruby
+  #username: secure_files_with_log_auditing
 
   # The password associated with the PostgreSQL role (username).
   #password:
@@ -55,7 +59,7 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: secure_files_with_log_auditing_ruby_test
+  database: secure_files_with_log_auditing_test
 
 # As with config/credentials.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -79,6 +83,6 @@ test:
 #
 production:
   <<: *default
-  database: secure_files_with_log_auditing_ruby_production
-  username: secure_files_with_log_auditing_ruby
-  password: <%= ENV["SECURE_FILES_WITH_LOG_AUDITING_RUBY_DATABASE_PASSWORD"] %>
+  database: secure_files_with_log_auditing_production
+  username: secure_files_with_log_auditing
+  password: <%= ENV["SECURE_FILES_WITH_LOG_AUDITING_DATABASE_PASSWORD"] %>
