@@ -87,11 +87,19 @@ GEM
     concurrent-ruby (1.3.4)
     connection_pool (2.4.1)
     crass (1.0.6)
+    csv (3.3.0)
     date (3.4.0)
+    debase (0.2.6)
+      debase-ruby_core_source (>= 3.3.6)
+    debase-ruby_core_source (3.3.6)
     debug (1.9.2)
       irb (~> 1.10)
       reline (>= 0.3.8)
     diff-lcs (1.5.1)
+    dotenv (3.1.4)
+    dotenv-rails (3.1.4)
+      dotenv (= 3.1.4)
+      railties (>= 6.1)
     drb (2.2.1)
     erubi (1.13.0)
     factory_bot (6.5.0)
@@ -103,12 +111,18 @@ GEM
       i18n (>= 1.8.11, < 2)
     globalid (1.2.1)
       activesupport (>= 6.1)
+    httparty (0.22.0)
+      csv
+      mini_mime (>= 1.0.0)
+      multi_xml (>= 0.5.2)
     i18n (1.14.6)
       concurrent-ruby (~> 1.0)
     io-console (0.7.2)
     irb (1.14.1)
       rdoc (>= 4.0.0)
       reline (>= 0.4.2)
+    jwt (2.9.3)
+      base64
     logger (1.6.1)
     loofah (2.23.1)
       crass (~> 1.0.2)
@@ -122,6 +136,8 @@ GEM
     mini_mime (1.1.5)
     minitest (5.25.1)
     msgpack (1.7.3)
+    multi_xml (0.7.1)
+      bigdecimal (~> 3.1)
     mutex_m (0.2.0)
     net-imap (0.5.0)
       date
@@ -209,6 +225,8 @@ GEM
       rspec-mocks (~> 3.13)
       rspec-support (~> 3.13)
     rspec-support (3.13.1)
+    ruby-debug-ide (0.7.3)
+      rake (>= 0.8.1)
     securerandom (0.3.1)
     stringio (3.1.1)
     thor (1.3.2)
@@ -230,13 +248,18 @@ PLATFORMS
 
 DEPENDENCIES
   bootsnap
+  debase (~> 0.2.6)
   debug
+  dotenv-rails
   factory_bot_rails (~> 6.2)
   faker (~> 3.0)
+  httparty
+  jwt
   pg (~> 1.1)
   puma (>= 5.0)
   rails (~> 7.1.4, >= 7.1.4.2)
   rspec-rails (~> 7.0)
+  ruby-debug-ide (~> 0.7.3)
   tzinfo-data
 
 RUBY VERSION
