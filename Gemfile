@@ -11,6 +11,7 @@ group :development, :test do
 
   gem "debase", "~> 0.2.6"
 end
+gem "keycloak-api-rails", "0.12.4"
 gem 'httparty'
 gem 'jwt'
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
