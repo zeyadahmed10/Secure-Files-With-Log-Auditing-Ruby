@@ -6,7 +6,7 @@ services:
       POSTGRES_USER: zeyad
       POSTGRES_PASSWORD: password
       PGDATA: /data/postgres
-      POSTGRES_DB: secure_files_with_log_auditing_development
+      POSTGRES_DB: secure_files_with_log_auditing_test
     volumes:
       - postgres:/data/postgres
     ports:
@@ -36,7 +36,7 @@ services:
       KC_DB: postgres
       KC_DB_PASSWORD: password
       KC_DB_SCHEMA: public
-      KC_DB_URL: jdbc:postgresql://postgres:5432/secure_files_with_log_auditing_development
+      KC_DB_URL: jdbc:postgresql://postgres:5432/secure_files_with_log_auditing_test
       KC_DB_USERNAME: zeyad
       KC_DB_URL_PORT: 5432
       KC_DB_URL_HOST: postgres
