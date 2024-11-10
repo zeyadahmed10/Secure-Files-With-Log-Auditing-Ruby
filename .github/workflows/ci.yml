@@ -29,7 +29,7 @@ jobs:
           bundler-cache: true
       
       - name: injecting kc_client_secret
-        uses: ruby ./update_secret.rb
+        run: ruby ./update_secret.rb
       
       - name: Run docker-compose
         uses: hoverkraft-tech/compose-action@v2.0.1
