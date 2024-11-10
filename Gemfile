@@ -6,9 +6,8 @@ group :development, :test do
   gem 'factory_bot_rails', '~> 6.2'
   gem 'faker', '~> 3.0'
   gem 'dotenv-rails'
-  
-  gem "ruby-debug-ide", "~> 0.7.3"
 end
+
 gem "keycloak-api-rails", "0.12.4"
 gem 'httparty'
 gem 'jwt'
@@ -53,6 +52,8 @@ end
 group :development do
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   # gem "spring"
+  gem "ruby-debug-ide", "~> 0.7.3"
+  gem "debase", "~> 0.2.6"
 end
 
 
