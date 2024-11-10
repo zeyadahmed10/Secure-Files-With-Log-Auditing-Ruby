@@ -5,7 +5,12 @@ group :development, :test do
   gem 'rspec-rails', '~> 7.0'
   gem 'factory_bot_rails', '~> 6.2'
   gem 'faker', '~> 3.0'
+  gem 'dotenv-rails'
 end
+
+gem "keycloak-api-rails", "0.12.4"
+gem 'httparty'
+gem 'jwt'
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.1.4", ">= 7.1.4.2"
 
@@ -47,5 +52,8 @@ end
 group :development do
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   # gem "spring"
+  gem "ruby-debug-ide", "~> 0.7.3"
+  gem "debase", "~> 0.2.6"
 end
+
 
