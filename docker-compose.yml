@@ -42,6 +42,7 @@ services:
       KC_DB_URL_HOST: postgres
       KEYCLOAK_ADMIN: admin
       KEYCLOAK_ADMIN_PASSWORD: admin
+    # command: start-dev
     command: start-dev --import-realm
     depends_on:
       - postgres
