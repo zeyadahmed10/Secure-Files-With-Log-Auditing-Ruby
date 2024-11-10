@@ -8,8 +8,6 @@ group :development, :test do
   gem 'dotenv-rails'
   
   gem "ruby-debug-ide", "~> 0.7.3"
-
-  gem "debase", "~> 0.2.6"
 end
 gem "keycloak-api-rails", "0.12.4"
 gem 'httparty'
