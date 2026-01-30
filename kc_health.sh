@@ -5,3 +5,10 @@ until [ "$(curl -o /dev/null -s -w '%{http_code}' http://localhost:8080)" -eq 20
     echo "Keycloak is still starting up..."
 done
 echo "Keycloak is ready!"
+
+
+
+
+
+
+
